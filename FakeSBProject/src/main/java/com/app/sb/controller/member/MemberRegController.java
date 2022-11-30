@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/member/register")
 public class MemberRegController {
 
+    @Autowired
+    private MemberRegService memberRegService;
+
     @GetMapping
     public String getRegPage(){
         return "member/registerForm";

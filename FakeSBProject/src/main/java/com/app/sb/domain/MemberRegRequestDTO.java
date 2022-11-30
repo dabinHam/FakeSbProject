@@ -33,4 +33,9 @@ public class MemberRegRequestDTO {
 
     private MultipartFile uphoto;
 
+    public MemberDTO toMember(){
+        MemberDTO memberDTO = MemberDTO.builder().uid(this.uid).upw(this.upw).uname(this.uname).nickname(this.nickname).phone(this.phone).email(this.email).address1(this.address1).address2(this.address2).regdate(this.regdate).build();
+        return memberDTO;
+    }
+
 }

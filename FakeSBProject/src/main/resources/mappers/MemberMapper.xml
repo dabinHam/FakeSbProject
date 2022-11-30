@@ -5,6 +5,9 @@
 <mapper namespace="com.app.sb.mapper.MemberMapper">
     <!--namespace = 만들어둔 인터페이스 경로 풀네임-->
 
+    <insert id="insertMemer" parameterType="com.app.sb.domain.MemberDTO">
+        insert into sb_member(uid, upw, uname, nickname, phone, email, address1, address2, uphoto) values(#{uid}, #{upw}, #{uname}, #{nickname}, #{phone}, #{email}, #{address1}, #{address2}, #{uphoto})
+    </insert>
 
 
 </mapper>

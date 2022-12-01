@@ -16,7 +16,7 @@ public class MenuListController {
 
     @GetMapping
     public String getMenuList(Model model){
-//        model.addAttribute("menuList",menuListService.getMenuList());
+        model.addAttribute("menuList",menuListService.getMenuList());
         return "menu/list";
     }
 

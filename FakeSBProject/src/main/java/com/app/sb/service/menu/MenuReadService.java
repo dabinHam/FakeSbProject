@@ -8,25 +8,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
-import java.util.Collections;
-import java.util.List;
-
-//@Service
-@Log4j2
 @Service
-public class MenuListService {
+@Log4j2
+public class MenuReadService {
+
     @Autowired(required = false)
     private MenuMapper menuMapper;
-    public List<MenuDTO> getMenuList() {
-        List<MenuDTO> list = null;
+
+
+    public MenuDTO getMenu(long mdx) {
+        MenuDTO menuDTO = null;
         try {
-//            @Cleanup Connection conn = ConnectionProvider.getInstance().getConnection();
-            list = menuMapper.selectAll();
-            log.info(list);
+            menuDTO = menuMapper.selectBymdx(mdx);
+            log.info(menuDTO);
         } catch (Exception e) {
             e.printStackTrace();
-            list = Collections.emptyList();
+            menuDTO = new MenuDTO();
         }
-        return list;
+        return menuDTO;
     }
 }

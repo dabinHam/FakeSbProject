@@ -9,9 +9,50 @@
         select * from sb_menu
     </select>
 
+    <select id="selectByOption" parameterType="com.app.sb.domain.MenuThemeOption" resultType="com.app.sb.domain.MenuDTO">
+        select * from sb_menu
+        <where>
+            <if test="searchType != null and keyword !=null">
+                <if test="searchType == 'theme'">
+                    <include refid="searchTheme"/>
+                </if>
+            </if>
+        </where>
+    </select>
+
+    <sql id="searchProduct">
+        product like concat('%', #{keyword},'%')
+    </sql>
+
+    <select id="selectByMdxs" parameterType="list" resultType="com.app.sb.domain.MenuDTO">
+        select * from sb_menu
+        <where>
+            <if test="list != null and list.size != 0">
+                mdx IN
+                <foreach collection="list" item="item" index="index" separator="," open="(" close=")"> <!--(10,20,30)  separator : 사이에 들어갈 요소-->s
+                    #{item}
+                </foreach>
+            </if>
+        </where>
+    </select>
+
+
+    <select id="selectByMdx" resultType="com.app.sb.domain.MenuDTO">
+        select * from sb_menu where mdx=#{mdx}
+    </select>
+
     <insert id="insertMenu" parameterType="com.app.sb.domain.MenuDTO">
-        insert into sb_Menu(mdx, theme, product, explain, imgid, size, allergy, kcal, transfat,protein,sodium,sugars,caffeine) values(#{mdx}, #{theme}, #{product}, #{explain}, #{imgid}, #{size}, #{allergy}, #{kcal}, #{transfat},#{protein},#{sodium},#{sugars},#{caffeine})
+        insert into sb_menu(mdx, theme, product, explain, imgid, size, allergy, kcal, transfat,protein,sodium,sugars,caffeine) values(#{mdx}, #{theme}, #{product}, #{explain}, #{imgid}, #{size}, #{allergy}, #{kcal}, #{transfat},#{protein},#{sodium},#{sugars},#{caffeine})
     </insert>
+
+    <update id="updateMdx" parameterType="com.app.sb.domain.MenuDTO">
+        update dept set product=#{product} ,theme={theme}, product={product}, explain={explain}, imgid={imgid}, size={size}, allergy={allergy}, kcal={kcal}, transfat={transfat}, protein={protein}, sodium={sodium}, sugars={sugars}, caffeine={caffeine} where mdx=#{mdx}
+    </update>
+
+    <delete id="deleteMdx">
+        delete from sb_menu where mdx=#{no}
+    </delete>
+
 
 
 </mapper>

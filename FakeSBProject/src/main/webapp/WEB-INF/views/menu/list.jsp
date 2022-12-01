@@ -19,7 +19,7 @@
 </h1>
     <h3>Menu</h3>
     <a href="/menu/modify">
-        메뉴관리
+        메뉴수정
     </a>
 <a href="/menu/insertForm">
     메뉴 등록

@@ -48,7 +48,7 @@
                 <a class="nav-link" href="#">COFFEE<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" style="color: red">MENU</a>
+                <a class="nav-link" href="/memu/list" style="color: red">MENU</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">STORE</a>

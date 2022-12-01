@@ -5,8 +5,12 @@
 <mapper namespace="com.app.sb.mapper.MenuMapper">
     <!--namespace = 만들어둔 인터페이스 경로 풀네임-->
 
+    <select id="selectAll" resultType="com.app.sb.domain.MenuDTO">
+        select * from sb_menu
+    </select>
+
     <insert id="insertMenu" parameterType="com.app.sb.domain.MenuDTO">
-        insert into sbMenu(mdx, theme, product, explain, imgid, size, allergy, kcal, transfat,protein,sodium,sugars,caffeine) values(#{mdx}, #{theme}, #{product}, #{explain}, #{imgid}, #{size}, #{allergy}, #{kcal}, #{transfat},#{protein},#{sodium},#{sugars},#{caffeine})
+        insert into sb_Menu(mdx, theme, product, explain, imgid, size, allergy, kcal, transfat,protein,sodium,sugars,caffeine) values(#{mdx}, #{theme}, #{product}, #{explain}, #{imgid}, #{size}, #{allergy}, #{kcal}, #{transfat},#{protein},#{sodium},#{sugars},#{caffeine})
     </insert>
 
 

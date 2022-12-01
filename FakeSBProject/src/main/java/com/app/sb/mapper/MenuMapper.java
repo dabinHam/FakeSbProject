@@ -3,6 +3,7 @@ package com.app.sb.mapper;
 import com.app.sb.domain.MemberDTO;
 import com.app.sb.domain.MenuDTO;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 

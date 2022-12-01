@@ -16,7 +16,7 @@
         <table>
             <tr>
                 <td>아이디</td>
-                <td><input type="text" name="uid" value="${loginInfo.uid}" disabled></td>
+                <td><input type="text" name="uid" value="${loginInfo.uid}" readonly></td>
             </tr>
             <tr>
                 <td>닉네임</td>

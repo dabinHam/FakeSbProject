@@ -28,7 +28,7 @@ public class MemberModifyController {
 
     @PostMapping
     public String Edit(MemberDTO memberDTO, HttpSession session){
-        log.info("edit...");
+        log.info("edit..." + memberDTO);
         memberModifyService.editMember(memberDTO);
         session.invalidate();
         return "redirect:/login";

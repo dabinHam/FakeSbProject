@@ -30,6 +30,17 @@ public class MemberTest {
         Assertions.assertEquals(1, result);
     }
 
+    @Test
+    public void selectByIdPwTest(){
+        MemberDTO memberDTO = memberMapper.selectByIdPw("a", "a");
+        log.info(memberDTO);
+        Assertions.assertNotNull(memberDTO);
+    }
+
+    @Test
+    public void deleteMemberTest(){
+        int result = memberMapper.deleteMember("p");
+    }
 
 }
 

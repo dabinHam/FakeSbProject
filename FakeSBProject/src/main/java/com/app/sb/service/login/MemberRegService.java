@@ -6,7 +6,6 @@ import com.app.sb.mapper.MemberMapper;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
@@ -21,8 +20,10 @@ public class MemberRegService {
     public int RegisterMember(MemberRegRequestDTO memberRegRequestDTO, HttpServletRequest request){
         String newFileName = null;
         if(memberRegRequestDTO.getUphoto()!=null && !memberRegRequestDTO.getUphoto().isEmpty()){
-            String dirRealPath = request.getSession().getServletContext().getRealPath("image/member");
-            log.info(dirRealPath);
+            String dirURI = "/image/member";
+            log.info(dirURI);
+            String dirRealPath = request.getSession().getServletContext().getRealPath(dirURI);
+            log.info("dirRealPath ... " + dirRealPath);
             newFileName = System.nanoTime() + memberRegRequestDTO.getUphoto().getOriginalFilename();
             log.info(newFileName);
             try {

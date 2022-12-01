@@ -10,5 +10,8 @@
         values(#{uid}, #{upw}, #{uname}, #{nickname}, #{phone}, #{email}, #{address1}, #{address2}, #{uphoto})
     </insert>
 
+    <select id="selectByIdPw" resultType="com.app.sb.domain.MemberDTO">
+        select * from sb_member where uid=#{uid} and upw=#{upw}
+    </select>
 
 </mapper>

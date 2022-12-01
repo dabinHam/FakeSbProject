@@ -15,15 +15,18 @@
 
   <H1>MyStarbucks</H1>
 
-    ${loginInfo}
+    ${loginInfo.uname} 님, 환영합니다.
 
-    <c:if test="${loginInfo ne null}">
-        ${loginInfo.uid}
-        <img src="image/member/${loginInfo.uphoto}"
-    </c:if>
+<%--    <c:if test="${loginInfo ne null}">--%>
+<%--        ${loginInfo.uid}--%>
+<%--        <img src="/image/member/${loginInfo.uphoto}"--%>
+<%--    </c:if>--%>
 
-    <br>
+    <hr>
+
     <a href="/logout">로그아웃</a>
+    <a href="/member/edit">회원수정</a>
+    <a href="/member/delete">회원탈퇴</a>
 
 
 

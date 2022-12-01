@@ -23,7 +23,9 @@
 
 
 <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light" >
+    <a href="/index">
     <img src="https://www.starbucks.co.kr/common/img/common/logo.png" width="70px">
+    </a>
     <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
         <span class="navbar-toggler-icon"></span>
     </button>

@@ -22,6 +22,9 @@
         <img src="image/member/${loginInfo.uphoto}"
     </c:if>
 
+    <br>
+    <a href="/logout">로그아웃</a>
+
 
 
 </body>

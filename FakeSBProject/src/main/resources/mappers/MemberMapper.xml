@@ -18,4 +18,10 @@
         delete from sb_member where uid=#{uid}
     </delete>
 
+    <update id="updateMember" parameterType="com.app.sb.domain.MemberDTO">
+        update sb_member set
+        nickname=#{nickname}, phone=#{phone}, email=#{email}, address1=#{address1}, address2=#{address2}
+        where uid=#{uid}
+    </update>
+
 </mapper>

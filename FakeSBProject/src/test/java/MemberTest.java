@@ -24,7 +24,7 @@ public class MemberTest {
     @Test
     public void insertMemerTest(){
 
-        MemberDTO memberDTO = MemberDTO.builder().uid("a").upw("a").uname("a").nickname("a").phone("a").email("a").address1("a").address2("a").uphoto("a").build();
+        MemberDTO memberDTO = MemberDTO.builder().uid("a").upw("a").uname("a").nickname("a").phone("a").email("a").address1("a").address2("a").uphoto(null).build();
         log.info(memberDTO);
         int result = memberMapper.insertMemer(memberDTO);
         Assertions.assertEquals(1, result);

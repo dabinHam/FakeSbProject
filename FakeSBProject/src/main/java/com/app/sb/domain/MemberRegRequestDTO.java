@@ -3,6 +3,7 @@ package com.app.sb.domain;
 import lombok.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.validation.constraints.NotEmpty;
 import java.time.LocalDate;
 
 @NoArgsConstructor
@@ -13,8 +14,10 @@ import java.time.LocalDate;
 @ToString
 public class MemberRegRequestDTO {
 
+    @NotEmpty
     private String uid;
 
+    @NotEmpty
     private String upw;
 
     private String uname;

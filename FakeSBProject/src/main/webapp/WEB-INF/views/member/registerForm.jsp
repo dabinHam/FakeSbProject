@@ -13,7 +13,7 @@
 <body>
 
     회원 가입
-
+    <form method="post" enctype="multipart/form-data">
     <table>
         <tr>
             <td></td>
@@ -32,8 +32,8 @@
             <td><input type="password" name="upw"></td>
         </tr>
         <tr>
-            <td>아이디</td>
-            <td><input type="text" name="uid"></td>
+            <td>이름</td>
+            <td><input type="text" name="uname"></td>
         </tr>
         <tr>
             <td>닉네임</td>
@@ -68,7 +68,7 @@
             <td><input type="submit" value="가입하기"></td>
         </tr>
     </table>
-
+    </form>
 
 
 </body>

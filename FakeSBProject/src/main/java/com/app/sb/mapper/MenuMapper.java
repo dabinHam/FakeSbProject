@@ -11,12 +11,20 @@ import java.util.List;
 public interface MenuMapper {
 
     // 메뉴 전체 출력
-    public List<MenuDTO> selectAll();
+    List<MenuDTO> selectAll();
 
-    // mdx 값으로 하나의 product 정보를 가져오는 메소드
-    public MenuDTO selectBymdx(long mdx);
+    // 상세페이지 , mdx 값으로 하나의 product 정보를 가져오는 메소드
+    MenuDTO selectByMdx(long mdx);
 
-    int insertProduct(MenuDTO dto);
+    // 등록
+    int insertMdx(MenuDTO menuDTO);
+
+    // 수정
+    int updateMdx(MenuDTO menuDTO);
+
+    // 삭제
+    int deleteMdx(long mdx);
+
 
 
 }

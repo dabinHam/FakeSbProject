@@ -12,12 +12,40 @@
     <title>Menu</title>
 </head>
 <body>
-    <h1>Menu</h1>
-    <table>
-        <tr>
-            <td>${menu.imgid}</td>
-            <td><a href="/menu/read?mdx=${menu.mdx}">${menu.prodict}</a></td>
-        </tr>
-    </table>
+<h1>
+    <a href="/index" style="width: 75%">
+        <img src="/image/main/sb_logo.png" alt="로고">
+    </a>
+</h1>
+    <h3>Menu</h3>
+    <a href="/menu/modify">
+        메뉴관리
+    </a>
+<a href="/menu/insertForm">
+    메뉴 등록
+</a>
+<ul>
+    <li>
+        <a href="/menu/read">
+            <img src="/image/menu/coffee.png" alt="기본사진" width="24%">
+        </a>
+    </li>
+    <li>
+        <a href="/menu/read">
+            <img src="/image/menu/coffee.png" alt="기본사진" width="24%">
+        </a>
+    </li>
+    <li>
+        <a href="/menu/read">
+            <img src="/image/menu/coffee.png" alt="기본사진" width="24%">
+        </a>
+    </li>
+    <li>
+        <a href="/menu/read">
+            <img src="/image/menu/coffee.png" alt="기본사진" width="24%">
+        </a>
+    </li>
+</ul>
+
 </body>
 </html>

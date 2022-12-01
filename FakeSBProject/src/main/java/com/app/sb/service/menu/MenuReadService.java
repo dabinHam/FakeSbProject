@@ -7,6 +7,7 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Service
 @Log4j2
@@ -19,10 +20,11 @@ public class MenuReadService {
     public MenuDTO getMenu(long mdx) {
         MenuDTO menuDTO = null;
         try {
-            menuDTO = menuMapper.selectBymdx(mdx);
+            menuDTO = menuMapper.selectByMdx(mdx);
             log.info(menuDTO);
         } catch (Exception e) {
             e.printStackTrace();
+            // 예외 발생 시 -> 빈 List 생성
             menuDTO = new MenuDTO();
         }
         return menuDTO;

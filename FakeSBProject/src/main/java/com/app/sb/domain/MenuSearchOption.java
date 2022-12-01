@@ -9,17 +9,16 @@ import lombok.*;
 @Setter
 @ToString
 @Builder
-public class MenuThemeOption {
+public class MenuSearchOption {
     // 테마 분류
     /*전체
     콜드브루
     에스프레소
-    프라푸치노블렌디드
-    티(티바나)
-    주스(병음료)*/
+    프라푸치노
+    주스
+    티*/
 
     private String searchType;
-
     private String keyword;
 
 

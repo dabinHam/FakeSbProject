@@ -21,30 +21,28 @@
     <a href="/menu/modify">
         메뉴수정
     </a>
-<a href="/menu/insertForm">
-    메뉴 등록
-</a>
+    <a href="/menu/insertForm">
+        메뉴 등록
+    </a>
 <ul>
     <li>
         <a href="/menu/read">
-            <img src="/image/menu/coffee.png" alt="기본사진" width="24%">
+            <div>
+                <img src="/uploadfile/menu/coffee.png" alt="커피이미지(${menu.productko}|${menu.producten}">
+            </div>
         </a>
-    </li>
-    <li>
         <a href="/menu/read">
-            <img src="/image/menu/coffee.png" alt="기본사진" width="24%">
+            ${menu.productko}
         </a>
     </li>
-    <li>
+<%--    <li>
         <a href="/menu/read">
-            <img src="/image/menu/coffee.png" alt="기본사진" width="24%">
+            <img src="/uploadfile/menu/${menu.mphoto}" alt="커피이미지(${menu.productko}|${menu.producten})" width="24%">
         </a>
-    </li>
-    <li>
         <a href="/menu/read">
-            <img src="/image/menu/coffee.png" alt="기본사진" width="24%">
+            ${menu.productko}
         </a>
-    </li>
+    </li>--%>
 </ul>
 
 </body>

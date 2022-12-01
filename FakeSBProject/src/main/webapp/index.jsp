@@ -1,12 +1,21 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
     <title>JSP - Hello World</title>
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="/css/bootstrap/offcanvas.css" rel="stylesheet">
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/assets/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="js/assets/vendor/popper.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/assets/js/vendor/holder.min.js"></script>
+    <script src="js/bootstrap/offcanvas.js"></script>
 </head>
 <body>
 
@@ -20,7 +29,7 @@
     <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="/member/register">Sign in</a>
+                <a class="nav-link" href="/member/register" style="color: red" >Sign in</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="#">My Starbucks</a>
@@ -37,7 +46,7 @@
                 <a class="nav-link" href="#">COFFEE<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">MENU</a>
+                <a class="nav-link" href="#" style="color: red">MENU</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">STORE</a>
@@ -157,15 +166,6 @@
 <a href="hello-servlet">Hello Servlet</a>
 
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="js/assets/vendor/jquery-slim.min.js"><\/script>')</script>
-<script src="js/assets/vendor/popper.min.js"></script>
-<script src="js/bootstrap/bootstrap.min.js"></script>
-<script src="js/assets/js/vendor/holder.min.js"></script>
-<script src="js/bootstrap/offcanvas.js"></script>
 
 </body>
 </html>

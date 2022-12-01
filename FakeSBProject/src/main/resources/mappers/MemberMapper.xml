@@ -11,7 +11,7 @@
     </insert>
 
     <select id="selectByIdPw" resultType="com.app.sb.domain.MemberDTO">
-        select * from sb_member where uid=#{uid} and upw=#{upw}
+        select * from sb_member where uid=#{param1} and upw=#{param2}
     </select>
 
 </mapper>

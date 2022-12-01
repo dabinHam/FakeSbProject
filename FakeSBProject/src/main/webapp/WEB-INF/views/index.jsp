@@ -31,10 +31,10 @@
     <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="/member/register" style="color: red" >Sign in</a>
+                <a class="nav-link" href="/login" style="color: red" >Sign in</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#">My Starbucks</a>
+                <a class="nav-link" href="/member/mystarbucks" style="color: red"> My Starbucks</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="#">Customer Service & Ideas</a>

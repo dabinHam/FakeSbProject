@@ -17,7 +17,7 @@
         <img src="/image/main/sb_logo.png" alt="로고">
     </a>
 </h1>
-
+<h3>메뉴관리 추가 | 수정 | 삭제 </h3>
     <table>
         <tr>
             <th>메뉴</th>
@@ -29,6 +29,7 @@
             <th>카페인(mg)</th>
             <th></th>
         </tr>
+    <c:forEach items="${menuList}" var="menu">
         <tr>
             <td>${menu.product}</td>
             <td>${menu.kcal}</td>
@@ -37,9 +38,13 @@
             <td>${menu.sodium}</td>
             <td>${menu.sugars}</td>
             <td>${menu.caffeine}</td>
-            <td><a href="/menu/modify">수정</a></td>
+            <td>
+                <a href="/menu/modify">수정</a> |
+                <a onclick="deleteMdx(${menu.mdx});" style="cursor: pointer">삭제</a>
+            </td>
         </tr>
+    </c:forEach>
     </table>
-
+<a href="insertForm.jsp">메뉴 등록</a>
 </body>
 </html>

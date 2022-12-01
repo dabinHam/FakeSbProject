@@ -3,6 +3,11 @@ package com.app.sb.domain;
 import lombok.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Positive;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Setter
@@ -11,11 +16,16 @@ import org.springframework.web.multipart.MultipartFile;
 @ToString
 public class MenuDTO {
 
+    @Min(value = 1)
+    @Max(value = 99)
+    @Positive
     private int mdx;
 //    private int islike;       // 상품 찜 하기 ( 추후 추가예정, 별도 저장table 필요)
 
     // 상품 구분,이름
+    @NotEmpty
     private String theme;
+    @NotEmpty
     private String product;
 
     // 설명, 이미지 (있을수도 있고 없을수도 있음.)

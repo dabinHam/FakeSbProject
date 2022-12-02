@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--<% response.sendRedirect("/index"); %>--%>
 
 <!DOCTYPE html>
@@ -32,9 +33,13 @@
 
     <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
+
+            <c:if test="${loginInfo eq null}">
             <li class="nav-item active">
                 <a class="nav-link" href="/login" style="color: red" >Sign in</a>
             </li>
+            </c:if>
+
             <li class="nav-item active">
                 <a class="nav-link" href="/member/mystarbucks" style="color: red"> My Starbucks</a>
             </li>

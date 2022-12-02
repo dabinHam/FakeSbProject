@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--<% response.sendRedirect("/index"); %>--%>
 
 <!DOCTYPE html>
@@ -31,47 +32,69 @@
     </button>
 
     <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/login" style="color: red" >Sign in</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="/member/mystarbucks" style="color: red"> My Starbucks</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Customer Service & Ideas</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Find a Store</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">COFFEE<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/memu/list" style="color: red">MENU</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">STORE</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">RESPONSIBILITY</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">STARBUCKS REWARDS</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">CORPORATE SALES</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">WHAT'S NEW</a>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+
+        <table>
+            <tr>
+                <td>
+            <ul class="navbar-nav mr-auto">
+                <c:if test="${loginInfo eq null}">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/login" style="color: red" >Sign in</a>
+                </li>
+                </c:if>
+
+                <c:if test="${loginInfo ne null}">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/logout" style="color: red" >Sign out</a>
+                    </li>
+                </c:if>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="/member/mystarbucks" style="color: red"> My Starbucks</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Customer Service & Ideas</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Find a Store</a>
+                </li>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    <a href="#">
+                    <img alt="통합검색" src="//image.istarbucks.co.kr/common/img/common/icon_magnifier_black.png">
+                    </a>
+                </form>
+            </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">COFFEE<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/memu/list" style="color: red">MENU</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">STORE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">RESPONSIBILITY</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">STARBUCKS REWARDS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CORPORATE SALES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">WHAT'S NEW</a>
+                </li>
+            </ul>
+                </td>
+            </tr>
+        </table>
     </div>
 </nav>
 

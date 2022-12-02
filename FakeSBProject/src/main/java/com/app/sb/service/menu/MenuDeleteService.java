@@ -11,13 +11,7 @@ public class MenuDeleteService {
     @Autowired(required = false)
     private MenuMapper menuMapper;
 
-    public int deleteMdx(long mdx) {
-        int result = 0;
-        try {
-            result =menuMapper.deleteMdx(mdx);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return result;
+    public int deleteMenu(int mdx){
+        return menuMapper.deleteMdx(mdx);
     }
 }

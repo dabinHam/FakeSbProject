@@ -10,6 +10,7 @@
 <head>
     <title>메뉴등록</title>
 </head>
+<link rel="stylesheet" href="/css/menu.css">
 <body>
     <h1>
         <a href="/index" style="width: 75%">

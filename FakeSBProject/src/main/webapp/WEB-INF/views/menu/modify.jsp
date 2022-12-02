@@ -11,6 +11,7 @@
 <head>
     <title>Title</title>
 </head>
+<link rel="stylesheet" href="/css/menu.css">
 <body>
 <h1>
     <a href="/index" style="width: 75%">
@@ -21,8 +22,8 @@
 <form method="post" enctype="multipart/form-data">
     <table>
         <tr>
-            <th><%--메뉴 번호--%></th>
-            <td><input type="hidden" name="mdx" value="${menu.mdx}"></td>
+            <th>메뉴 번호</th>
+            <td><input type="hidden" name="mdx" value="${menu.mdx}" readonly></td>
         </tr>
         <tr>
             <th>메뉴 구분</th>

@@ -42,7 +42,10 @@ public class MenuInsertController {
             return "redirect:/menu/insertForm";
         }
         log.info(menuRegRequestDTO.toMenu());
+        log.info(menuRegRequestDTO);
+        log.info("menuRegRequestDTO ->>>" + menuRegRequestDTO);
         menuInstertService.regMenu(menuRegRequestDTO, request);
+
         return "redirect:/index";
     }
 

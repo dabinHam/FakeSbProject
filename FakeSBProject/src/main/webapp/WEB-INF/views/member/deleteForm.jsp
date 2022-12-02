@@ -18,6 +18,10 @@
     <table>
       <tr>
         <td></td>
+        <td><input type="hidden" name="uid" value="${loginInfo.uid}"></td>
+      </tr>
+      <tr>
+        <td></td>
         <td><input type="submit" value="탈퇴하기"></td>
       </tr>
     </table>

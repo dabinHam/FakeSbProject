@@ -34,7 +34,7 @@
     <p style="color: red">로그인에 실패하였습니다. 아이디 또는 패스워드를 확인해주세요. </p>
   </c:if>
 
-  <a href="/member/register">회원가입</a>
+  <a href="/register">회원가입</a>
 
 </body>
 </html>

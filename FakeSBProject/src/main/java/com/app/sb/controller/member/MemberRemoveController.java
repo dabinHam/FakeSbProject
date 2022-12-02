@@ -9,20 +9,20 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 @Log4j2
+@RequestMapping("/member/delete")
 public class MemberRemoveController {
 
     @Autowired
     private MemberRemoveService memberRemoveService;
 
-    @RequestMapping(value = "/member/delete", method = RequestMethod.GET)
+    @GetMapping
     public String getDeletePage(){
       return "/member/deleteForm";
     }
 
-    @RequestMapping(value = "/member/delete/{uid}", method = RequestMethod.POST)
-    public String deleteMember(@PathVariable("uid") String uid) {
+    @PostMapping
+    public String deleteMember(@RequestParam("uid") String uid) {
         log.info("delete..." + uid);
-        String path = "/delete/member/uid?=uid";
         memberRemoveService.deleteMember(uid);
         return "/index";
 

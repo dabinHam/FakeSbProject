@@ -20,7 +20,7 @@ public class MemberRegService {
     public int RegisterMember(MemberRegRequestDTO memberRegRequestDTO, HttpServletRequest request){
         String newFileName = null;
         if(memberRegRequestDTO.getUphoto()!=null && !memberRegRequestDTO.getUphoto().isEmpty()){
-            String dirURI = "/image/member";
+            String dirURI = "/uploadfile/member";
             log.info(dirURI);
             String dirRealPath = request.getSession().getServletContext().getRealPath(dirURI);
             log.info("dirRealPath ... " + dirRealPath);

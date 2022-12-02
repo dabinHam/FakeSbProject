@@ -40,6 +40,12 @@
             </li>
             </c:if>
 
+            <c:if test="${loginInfo ne null}">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/logout" style="color: red" >Sign out</a>
+                </li>
+            </c:if>
+
             <li class="nav-item active">
                 <a class="nav-link" href="/member/mystarbucks" style="color: red"> My Starbucks</a>
             </li>

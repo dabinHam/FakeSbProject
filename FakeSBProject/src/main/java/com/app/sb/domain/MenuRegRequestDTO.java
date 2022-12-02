@@ -23,10 +23,10 @@ import java.io.IOException;
 @ToString
 public class MenuRegRequestDTO {
 
-    @Min(value = 1)
+/*    @Min(value = 1)
     @Max(value = 99)
     @Positive
-    private int mdx;    // 상품번호
+    private int mdx;    // 상품번호*/
 //    private int islike;       // 상품 찜 하기 ( 추후 추가예정, 별도 저장table 필요)
 
 
@@ -61,7 +61,6 @@ public class MenuRegRequestDTO {
 
     public MenuDTO toMenu(){
         MenuDTO menuDTO = MenuDTO.builder()
-                .mdx(this.mdx)
                 .theme(this.theme)
                 .productko(this.productko)
                 .producten(this.producten)

@@ -25,24 +25,18 @@
         메뉴 등록
     </a>
 <ul>
+    <c:forEach var="menu" items="" varStatus="status">
     <li>
         <a href="/menu/read">
             <div>
-                <img src="/uploadfile/menu/coffee.png" alt="커피이미지(${menu.productko}|${menu.producten}">
+                <img src="/uploadfile/menu/${menu.mphoto}" alt="커피이미지(${menu.productko}|${menu.producten}">
             </div>
         </a>
         <a href="/menu/read">
             ${menu.productko}
         </a>
     </li>
-<%--    <li>
-        <a href="/menu/read">
-            <img src="/uploadfile/menu/${menu.mphoto}" alt="커피이미지(${menu.productko}|${menu.producten})" width="24%">
-        </a>
-        <a href="/menu/read">
-            ${menu.productko}
-        </a>
-    </li>--%>
+    </c:forEach>
 </ul>
 
 </body>

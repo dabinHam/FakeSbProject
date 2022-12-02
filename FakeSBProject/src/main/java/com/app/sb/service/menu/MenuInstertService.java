@@ -22,11 +22,13 @@ public class MenuInstertService {
     @Autowired(required = false)
     private MenuMapper menuMapper;
 
-    public int insertMdx(MenuRegRequestDTO menuRegRequestDTO, HttpServletRequest request){
+    public int regMenu(MenuRegRequestDTO menuRegRequestDTO, HttpServletRequest request){
         String newFileName = null;
         if(menuRegRequestDTO.getMphoto()!=null && !menuRegRequestDTO.getMphoto().isEmpty()){
-            String uploadURI = "/uploadfile/memu";
-            String dirRealPath = request.getSession().getServletContext().getRealPath(uploadURI);
+//            String uploadURI = "/uploadfile/memu";
+            String dirURI = "/uploadfile/memu";
+            log.info(dirURI);
+            String dirRealPath = request.getSession().getServletContext().getRealPath(dirURI);
             log.info(dirRealPath);
             log.info("dirRealPath ... " + dirRealPath);
             newFileName = System.nanoTime() + menuRegRequestDTO.getMphoto().getOriginalFilename();
@@ -42,7 +44,7 @@ public class MenuInstertService {
             menuDTO.setMphoto(newFileName);
         }
         log.info(menuDTO);
-        return menuMapper.insertMdx(menuDTO);
+        return menuMapper.insertMenu(menuDTO);
     }
 
 }

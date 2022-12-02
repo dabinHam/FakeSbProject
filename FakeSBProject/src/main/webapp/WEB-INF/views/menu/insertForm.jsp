@@ -20,10 +20,10 @@
 
     <form method="post" enctype="multipart/form-data">
         <table>
-            <tr>
-                <th><%--메뉴 번호--%></th>
+<%--            <tr>
+                <th>&lt;%&ndash;메뉴 번호&ndash;%&gt;</th>
                 <td><input type="hidden" name="mdx" value="${menu.mdx}"></td>
-            </tr>
+            </tr>--%>
             <tr>
                 <th>메뉴 구분</th>
                 <td>

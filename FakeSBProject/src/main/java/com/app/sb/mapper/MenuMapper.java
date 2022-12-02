@@ -22,7 +22,7 @@ public interface MenuMapper {
     MenuDTO selectByMdx(long mdx);
 
     // 등록
-    int insertMdx(MenuDTO menuDTO);
+    int insertMenu(MenuDTO menuDTO);
 
     // 수정
     int updateMdx(MenuDTO menuDTO);

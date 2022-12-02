@@ -14,7 +14,7 @@ import javax.validation.Valid;
 
 @Log4j2
 @Controller
-@RequestMapping("/member/register")
+@RequestMapping("/register")
 public class MemberRegController {
 
     @Autowired
@@ -31,7 +31,7 @@ public class MemberRegController {
         log.info("RegController register()...");
         if(bindingResult.hasErrors()){
             log.info(bindingResult.getAllErrors());
-            return "redirect:/member/register";
+            return "redirect:/register";
         }
         log.info(memberRegRequestDTO.toMember());
         memberRegService.RegisterMember(memberRegRequestDTO, request);

@@ -1,6 +1,7 @@
 package com.app.sb.controller.member;
 
 import com.app.sb.domain.MemberDTO;
+import com.app.sb.domain.MemberRegRequestDTO;
 import com.app.sb.service.login.MemberModifyService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,9 +29,9 @@ public class MemberModifyController {
     }
 
     @PostMapping
-    public String Edit(MemberDTO memberDTO, HttpSession session){
-        log.info("edit..." + memberDTO);
-        memberModifyService.editMember(memberDTO);
+    public String Edit(MemberRegRequestDTO memberRegRequestDTO, HttpSession session){
+        log.info("edit..." + memberRegRequestDTO);
+        memberModifyService.editMember(memberRegRequestDTO);
         session.invalidate();
         return "redirect:/login";
     }

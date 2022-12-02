@@ -23,7 +23,7 @@
 <%--    </c:if>--%>
 
     <hr>
-    <img src="/uploadfile/member/${loginInfo.uphoto}">
+    <img src="/uploadfile/member/${loginInfo.uphoto}" width="150px">
     <a href="/logout">로그아웃</a>
     <a href="/member/edit">회원수정</a>
     <a href="/member/delete">회원탈퇴</a>

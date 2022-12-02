@@ -1,4 +1,4 @@
-package com.app.sb.controller;
+package com.app.sb.interceptor;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

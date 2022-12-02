@@ -29,6 +29,7 @@
                 <th>메뉴 구분</th>
                 <td>
                     <select name="theme" id="theme">
+                        <option selected>=== 카테고리 선택 ===</option>
                         <option>콜드브루</option>
                         <option>에스프레소</option>
                         <option>프라푸치노</option>
@@ -68,6 +69,7 @@
                 <th>영양정보 사이즈</th>
                 <td>
                     <select name="size" id="size">
+                        <option selected>=== 영양정보 기본사이즈 선택 ===</option>
                         <option>Solo(솔로) / 22ml(0.75 fl oz)</option>
                         <option>Tall(톨) / 355ml(12 fl oz)</option>
                         <option>Bootle(보틀) / 500ml(17 fl oz)</option>

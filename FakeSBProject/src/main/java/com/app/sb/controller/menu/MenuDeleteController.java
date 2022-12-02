@@ -22,7 +22,7 @@ public class MenuDeleteController {
     ){
         log.info("delete ...  " + mdx);
         menuDeleteService.deleteMenu(mdx);
-        return "redirect:/menu/list";
+        return "redirect:/menu/manage";
     }
 
 }

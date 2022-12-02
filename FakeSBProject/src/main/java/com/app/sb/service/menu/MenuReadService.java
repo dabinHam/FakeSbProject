@@ -16,8 +16,7 @@ public class MenuReadService {
     @Autowired(required = false)
     private MenuMapper menuMapper;
 
-
-    public MenuDTO getMenu(long mdx) {
+/*    public MenuDTO getMenu(long mdx) {
         MenuDTO menuDTO = null;
         try {
             menuDTO = menuMapper.selectByMdx(mdx);
@@ -28,5 +27,9 @@ public class MenuReadService {
             menuDTO = new MenuDTO();
         }
         return menuDTO;
+    }*/
+
+    public MenuDTO getMenu(int mdx){
+        return menuMapper.selectByMdx(mdx);
     }
 }

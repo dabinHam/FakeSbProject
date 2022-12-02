@@ -30,11 +30,11 @@ public class MenuRegRequestDTO {
 //    private int islike;       // 상품 찜 하기 ( 추후 추가예정, 별도 저장table 필요)
 
 
-    @NotEmpty
+
     private String theme;       // 상품구분     콜드브루 에스프레소 프라푸치노 주스 티
-    @NotEmpty
+
     private String productko;   // 상품명(한글)
-    @NotEmpty
+
     private String producten;   // 상품명(영문)
 
     private MultipartFile mphoto;   // 커피이미지

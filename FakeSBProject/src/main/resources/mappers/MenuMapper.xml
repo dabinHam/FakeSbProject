@@ -47,8 +47,10 @@
     </insert>
 
     <update id="updateMdx" parameterType="com.app.sb.domain.MenuDTO">
-        update dept set productko=#{productko}, producten=#{producten} ,theme={theme}, product={product},longexpln={longexpln}, shortexpln={shortexpln}, mphoto={mphoto}, size={size},
-        allergy={allergy}, kcal={kcal}, transfat={transfat}, protein={protein}, sodium={sodium}, sugars={sugars}, caffeine={caffeine} where mdx=#{mdx}
+        update sb_menu set productko=#{productko}, producten=#{producten} ,theme=#{theme}, product=#{product},longexpln=#{longexpln},
+        shortexpln=#{shortexpln}, mphoto=#{mphoto}, size=#{size}, allergy=#{allergy}, kcal=#{kcal}, transfat=#{transfat}, protein=#{protein},
+        sodium=#{sodium}, sugars=#{sugars}, caffeine=#{caffeine}
+        where mdx=#{mdx}
     </update>
 
     <delete id="deleteMdx">

@@ -57,15 +57,21 @@
                 <td>${menu.caffeine}</td>
                 <td>${menu.allergy}</td>
                 <td>
-                    <a class="menu_btn" href="/menu/modify">수정</a> |
+                    <a class="menu_btn" href="/menu/modify?no=${menu.mdx}">수정</a> |
                     <a class="menu_btn" onclick="deleteMdx(${menu.mdx});">삭제</a>
                 </td>
             </tr>
         </c:forEach>
     </table>
 </form>
-<a class="menu_btn" href="/menu/insertForm">
-    메뉴 등록
-</a>
+<a class="menu_btn" href="/menu/insertForm">메뉴 등록</a>
+<a class="menu_btn" href="/menu/list">메뉴로 돌아가기</a>
 </body>
+<script>
+    function deleteMdx(mdx){
+        if(confirm("삭제하시겠습니까?")){
+            location.href = '/menu/delete?mdx='+mdx;
+        }
+    }
+</script>
 </html>

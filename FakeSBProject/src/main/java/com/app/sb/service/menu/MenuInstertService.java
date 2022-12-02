@@ -25,8 +25,8 @@ public class MenuInstertService {
     public int regMenu(MenuRegRequestDTO menuRegRequestDTO, HttpServletRequest request){
         String newFileName = null;
         if(menuRegRequestDTO.getMphoto()!=null && !menuRegRequestDTO.getMphoto().isEmpty()){
-//            String uploadURI = "/uploadfile/memu";
-            String dirURI = "/uploadfile/memu";
+//            String uploadURI = "/uploadfile/menu";
+            String dirURI = "/uploadfile/menu";
             log.info(dirURI);
             String dirRealPath = request.getSession().getServletContext().getRealPath(dirURI);
             log.info(dirRealPath);

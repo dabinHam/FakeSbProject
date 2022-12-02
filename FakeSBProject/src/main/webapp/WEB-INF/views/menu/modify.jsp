@@ -23,12 +23,13 @@
     <table>
         <tr>
             <th>메뉴 번호</th>
-            <td><input type="hidden" name="mdx" value="${menu.mdx}" readonly></td>
+            <td><input type="int" name="mdx" value="${mdx.mdx}" readonly></td>
         </tr>
         <tr>
             <th>메뉴 구분</th>
             <td>
                 <select name="theme" id="theme">
+                    <option selected>${mdx.theme}</option>
                     <option>콜드브루</option>
                     <option>에스프레소</option>
                     <option>프라푸치노</option>
@@ -37,26 +38,22 @@
                 </select>
             </td>
         </tr>
-        <%--            <tr>
-                        <th>메뉴 구분</th>
-                        <td><input type="text" name="theme" value="${menu.theme}"></td>
-                    </tr>--%>
 
         <tr>
             <th>이미지등록</th>
-            <td><input type="file" name="mphoto" value="${menu.mphoto}"></td>
+            <td><input type="file" name="mphoto" value="${mdx.mphoto}"></td>
         </tr>
         <tr>
             <th>메뉴(한글)</th>
-            <td><input type="text" name="productko" value="${menu.productko}"></td>
+            <td><input type="text" name="productko" value="${mdx.productko}"></td>
         </tr>
         <tr>
             <th>메뉴(영문)</th>
-            <td><input type="text" name="producten" value="${menu.producten}"></td>
+            <td><input type="text" name="producten" value="${mdx.producten}"></td>
         </tr>
         <tr>
             <th>짧은 설명문구</th>
-            <td><input type="text" name="shortexpln" value="${menu.shortexpln}"></td>
+            <td><input type="text" name="shortexpln" value="${mdx.shortexpln}"></td>
         </tr>
         <tr>
             <th>긴 설명문구</th>
@@ -68,6 +65,7 @@
             <th>영양정보 사이즈</th>
             <td>
                 <select name="size" id="size">
+                    <option selected>${mdx.size}</option>
                     <option>Solo(솔로) / 22ml(0.75 fl oz)</option>
                     <option>Tall(톨) / 355ml(12 fl oz)</option>
                     <option>Bootle(보틀) / 500ml(17 fl oz)</option>
@@ -80,31 +78,31 @@
         </tr>
         <tr>
             <th>1회 제공량(kcal)</th>
-            <td><input type="text" name="kcal" value="${menu.kcal}"></td>
+            <td><input type="text" name="kcal" value="${mdx.kcal}"></td>
         </tr>
         <tr>
             <th>포화지방(g)</th>
-            <td><input type="text" name="transfat" value="${menu.transfat}"></td>
+            <td><input type="text" name="transfat" value="${mdx.transfat}"></td>
         </tr>
         <tr>
             <th>단백질(g)</th>
-            <td><input type="text" name="protein" value="${menu.protein}"></td>
+            <td><input type="text" name="protein" value="${mdx.protein}"></td>
         </tr>
         <tr>
             <th>나트륨(mg)</th>
-            <td><input type="text" name="sodium" value="${menu.sodium}"></td>
+            <td><input type="text" name="sodium" value="${mdx.sodium}"></td>
         </tr>
         <tr>
             <th>당류(g)</th>
-            <td><input type="text" name="sugars" value="${menu.sugars}"></td>
+            <td><input type="text" name="sugars" value="${mdx.sugars}"></td>
         </tr>
         <tr>
             <th>카페인(mg)</th>
-            <td><input type="text" name="caffeine" value="${menu.caffeine}"></td>
+            <td><input type="text" name="caffeine" value="${mdx.caffeine}"></td>
         </tr>
         <tr>
             <th>알레르기 유발요인</th>
-            <td><input type="text" name="allergy" value="${menu.allergy}"></td>
+            <td><input type="text" name="allergy" value="${mdx.allergy}"></td>
         </tr>
         <tr>
             <th></th>

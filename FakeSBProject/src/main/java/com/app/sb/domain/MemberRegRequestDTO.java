@@ -14,7 +14,7 @@ import java.time.LocalDate;
 @ToString
 public class MemberRegRequestDTO {
 
-    @NotEmpty
+    @NotEmpty(message = "아이디를 입력해주세요. ")
     private String uid;
 
     @NotEmpty

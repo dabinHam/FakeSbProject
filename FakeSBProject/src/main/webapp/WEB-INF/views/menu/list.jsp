@@ -58,9 +58,8 @@
         </tr>
         <c:forEach var="menu" items="${menuList}" varStatus="stat">
         <tr>
-            <td>${menu.mdx}</td>
-            <td>${menu.theme}</td>
-            <td>${menu.mphoto}</td>
+            <td><a href="/menu/read?mdx=${menu.mdx}">${menu.mdx}</a></td>
+            <td><a href="/menu/read?mdx=${menu.mdx}">${menu.mphoto}</a></td>
             <td>${menu.productko}</td>
             <td>${menu.producten}</td>
             <td>${menu.shortexpln}</td>

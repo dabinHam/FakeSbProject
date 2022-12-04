@@ -9,10 +9,7 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @Log4j2
@@ -26,17 +23,17 @@ public class MenuModifyController {
 
 
     @GetMapping
-    public void getMenuModify(@RequestParam("no") int mdx, Model model){
+    public String getMenuModify(@RequestParam("no") int mdx, Model model){
             log.info("getMenuModify() .......");
             model.addAttribute("mdx",menuReadService.getMenu(mdx));
+            return "menu/modify";
         }
 
     @PostMapping
-    public String modift(MenuRegRequestDTO menuRegRequestDTO){
-        log.info("modify post ...");
-        log.info(menuRegRequestDTO);
-        menuModifyService.modifyMenu(menuRegRequestDTO);
-        return "redirect:/menu/modify";
+    public String update(MenuRegRequestDTO menuRegRequestDTO){
+        log.info("update post ..." + menuRegRequestDTO);
+        menuModifyService.updateMenu(menuRegRequestDTO);
+        return "redirect:/menu/manage";
     }
 
 

@@ -19,7 +19,7 @@ public interface MenuMapper {
     List<MenuDTO> selectByMdxs(List<Integer> mdxs);
 
     // 상세페이지 , mdx 값으로 하나의 product 정보를 가져오는 메소드
-    MenuDTO selectByMdx(long mdx);
+    MenuDTO selectByMdx(int mdx);
 
     // 등록
     int insertMenu(MenuDTO menuDTO);

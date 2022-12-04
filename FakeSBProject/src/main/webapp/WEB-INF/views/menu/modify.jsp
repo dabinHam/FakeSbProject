@@ -23,7 +23,7 @@
     <table>
         <tr>
             <th>메뉴 번호</th>
-            <td><input type="int" name="mdx" value="${mdx.mdx}" readonly></td>
+            <td><input type="number" name="mdx" value="${mdx.mdx}" readonly></td>
         </tr>
         <tr>
             <th>메뉴 구분</th>
@@ -106,7 +106,7 @@
         </tr>
         <tr>
             <th></th>
-            <td><input type="submit" value="등록"></td>
+            <td><input type="submit" value="수정"></td>
         </tr>
     </table>
 </form>

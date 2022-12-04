@@ -42,14 +42,15 @@
     </select>
 
     <insert id="insertMenu" parameterType="com.app.sb.domain.MenuDTO">
-        insert into sb_menu(mdx, theme, productko, producten, longexpln, shortexpln, size, kcal, transfat, protein, sodinum, sugars, caffeine, allergy, mphoto)
+        insert into sb_menu(mdx, theme, productko, producten, longexpln, shortexpln, size, kcal, transfat, protein, sodium, sugars, caffeine, allergy, mphoto)
         values(#{mdx}, #{theme}, #{productko}, #{producten}, #{longexpln}, #{shortexpln}, #{size}, #{kcal}, #{transfat},#{protein},#{sodium},#{sugars},#{caffeine}, #{allergy},#{mphoto} )
     </insert>
 
     <update id="updateMdx" parameterType="com.app.sb.domain.MenuDTO">
-        update sb_menu set productko=#{productko}, producten=#{producten} ,theme=#{theme}, product=#{product},longexpln=#{longexpln},
-        shortexpln=#{shortexpln}, mphoto=#{mphoto}, size=#{size}, allergy=#{allergy}, kcal=#{kcal}, transfat=#{transfat}, protein=#{protein},
-        sodium=#{sodium}, sugars=#{sugars}, caffeine=#{caffeine}
+        update sb_menu set
+        theme=#{theme}, productko=#{productko}, producten=#{producten} , longexpln=#{longexpln},
+        shortexpln=#{shortexpln}, mphoto=#{mphoto}, size=#{size}, allergy=#{allergy}, kcal=#{kcal},
+        transfat=#{transfat}, protein=#{protein}, sodium=#{sodium}, sugars=#{sugars}, caffeine=#{caffeine}
         where mdx=#{mdx}
     </update>
 

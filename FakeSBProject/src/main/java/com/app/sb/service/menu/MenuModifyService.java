@@ -12,10 +12,10 @@ import org.springframework.stereotype.Service;
 @Log4j2
 public class MenuModifyService {
 
-    @Autowired
+    @Autowired(required = false)
     private MenuMapper menuMapper;
 
-    public int modifyMenu(MenuRegRequestDTO menuRegRequestDTO){
+    public int updateMenu(MenuRegRequestDTO menuRegRequestDTO){
         MenuDTO menuDTO = menuRegRequestDTO.toMenu();
         return menuMapper.updateMdx(menuDTO);
     }

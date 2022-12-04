@@ -16,20 +16,15 @@ public class MenuReadService {
     @Autowired(required = false)
     private MenuMapper menuMapper;
 
-/*    public MenuDTO getMenu(long mdx) {
+    public MenuDTO getMenu(int mdx) {
         MenuDTO menuDTO = null;
         try {
             menuDTO = menuMapper.selectByMdx(mdx);
             log.info(menuDTO);
         } catch (Exception e) {
             e.printStackTrace();
-            // 예외 발생 시 -> 빈 List 생성
             menuDTO = new MenuDTO();
         }
         return menuDTO;
-    }*/
-
-    public MenuDTO getMenu(int mdx){
-        return menuMapper.selectByMdx(mdx);
     }
 }

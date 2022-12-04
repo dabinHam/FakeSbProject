@@ -15,9 +15,6 @@ public class MenuListController {
     @Autowired
     private MenuListService menuListService;
 
-/*    @Autowired
-    private */
-
     @GetMapping
     public String getMenuList(Model model){
         model.addAttribute("menuList",menuListService.getMenuList());

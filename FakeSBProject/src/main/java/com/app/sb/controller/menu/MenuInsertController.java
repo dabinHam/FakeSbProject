@@ -36,7 +36,9 @@ public class MenuInsertController {
         return "menu/insertForm";
     }
     @PostMapping
-    public String insert(@Valid MenuRegRequestDTO menuRegRequestDTO, BindingResult bindingResult, HttpServletRequest request){
+    public String insert(@Valid MenuRegRequestDTO menuRegRequestDTO,
+                         BindingResult bindingResult,
+                         HttpServletRequest request){
         log.info("MenuInsertController insert()...");
         if(bindingResult.hasErrors()){
             log.info(bindingResult.getAllErrors());

@@ -119,8 +119,9 @@
         </a>
     </c:if>
         <ul class="row menu-list-main-ul">
-            <c:forEach var="menu" items="${menuList}" varStatus="stat">
+            <c:forEach var="menu" items="${menu}" varStatus="stat">
                 <li class="col-md-3">
+                    <h4 class="blind">${menu.mdx}</h4>
                     <a href="/menu/read?mdx=${menu.mdx}" class="m_img_box">
                         <img src="/uploadfile/menu/${menu.mphoto}" alt="(${menu.productko}|${menu.producten}">
                     </a>

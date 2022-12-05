@@ -37,9 +37,9 @@
     </select>-->
 
 
-    <select id="selectByMdx" resultType="com.app.sb.domain.MenuDTO">
+<!--    <select id="selectByMdx" resultType="com.app.sb.domain.MenuDTO">
         select * from sb_menu where mdx=#{mdx}
-    </select>
+    </select>-->
 
     <insert id="insertMenu" parameterType="com.app.sb.domain.MenuDTO">
         insert into sb_menu(mdx, theme, productko, producten, longexpln, shortexpln, size, kcal, transfat, protein, sodium, sugars, caffeine, allergy, mphoto)

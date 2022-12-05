@@ -5,6 +5,7 @@ import com.app.sb.domain.MenuDTO;
 
 import com.app.sb.domain.MenuSearchOption;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
@@ -19,7 +20,8 @@ public interface MenuMapper {
     List<MenuDTO> selectByMdxs(List<Integer> mdxs);
 
     // 상세페이지 , mdx 값으로 하나의 product 정보를 가져오는 메소드
-    MenuDTO selectByMdx(int mdx);
+    @Select("select * from sb_menu where mdx=#{mdx}")
+    MenuDTO selectByMdx(@Param("mdx") int mdx);
 
     // 등록
     int insertMenu(MenuDTO menuDTO);
@@ -28,7 +30,7 @@ public interface MenuMapper {
     int updateMdx(MenuDTO menuDTO);
 
     // 삭제
-    int deleteMdx(long mdx);
+    int deleteMdx(int mdx);
 
 
 

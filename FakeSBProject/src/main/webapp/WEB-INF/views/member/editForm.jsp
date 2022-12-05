@@ -115,12 +115,17 @@
             </tr>
             <tr>
                 <%--주소 폼 시작--%>
-                <td><input type="text" id="sample6_postcode" placeholder="우편번호" onclick="sample6_execDaumPostcode()" class="form-control"></td>
-                <td><input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기" class="btn"></td>
+                <td rowspan="2">
+                    <input type="text" id="sample6_postcode" placeholder="우편번호" class="form-control mb-2" onclick="sample6_execDaumPostcode()">
+                    <input type="text" name="address1" id="sample6_address" placeholder="주소" class="form-control">
+
+                </td>
+                <td rowspan="2">
+                    <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기" class="btn mb-2">
+                    <input type="text" name="address2" id="sample6_detailAddress" placeholder="상세주소" class="form-control">
+                </td>
             </tr>
             <tr>
-                <td><input type="text" name="address1" id="sample6_address" placeholder="주소" class="form-control"></td>
-                <td><input type="text" name="address2" id="sample6_detailAddress" placeholder="상세주소" class="form-control"></td>
                 <td><input type="hidden" id="sample6_extraAddress"></td>
                 <%--주소 폼 끝--%>
             </tr>

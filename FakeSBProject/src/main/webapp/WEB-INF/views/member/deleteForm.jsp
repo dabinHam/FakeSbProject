@@ -32,10 +32,18 @@
       <tr>
         <td>
           <ul class="navbar-nav mr-auto">
+            <c:if test="${loginInfo eq null}">
+              <li class="nav-item active">
+                <a class="nav-link" href="/login" style="color: red" >Sign in</a>
+              </li>
+            </c:if>
 
-            <li class="nav-item active">
-              <a class="nav-link" href="/logout" style="color: red" >Sign out</a>
-            </li>
+            <c:if test="${loginInfo ne null}">
+              <li class="nav-item active">
+                <a class="nav-link" href="/logout" style="color: red" >Sign out</a>
+              </li>
+            </c:if>
+
             <li class="nav-item active">
               <a class="nav-link" href="/member/mystarbucks" style="color: red"> My Starbucks</a>
             </li>
@@ -97,7 +105,7 @@
       </tr>
       <tr>
         <td></td>
-        <td><input type="submit" value="탈퇴하기"></td>
+        <td><input type="submit" value="탈퇴하기" class="btn btn-success"></td>
       </tr>
     </table>
   </form>

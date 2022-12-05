@@ -9,69 +9,156 @@
 <html>
 <head>
     <title>회원가입</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/css/bootstrap/offcanvas.css" rel="stylesheet">
 </head>
 <body>
 
-    회원 가입
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light" >
+    <a href="/index">
+        <img src="https://www.starbucks.co.kr/common/img/common/logo.png" width="70px">
+    </a>
+    <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse offcanvas-collapse m-sm-2" id="navbarsExampleDefault">
+
+        <table>
+            <tr>
+                <td>
+                    <ul class="navbar-nav mr-auto">
+                        <c:if test="${loginInfo eq null}">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/login" style="color: red" >Sign in</a>
+                            </li>
+                        </c:if>
+
+                        <c:if test="${loginInfo ne null}">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/logout" style="color: red" >Sign out</a>
+                            </li>
+                        </c:if>
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/member/mystarbucks" style="color: red"> My Starbucks</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Customer Service & Ideas</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Find a Store</a>
+                        </li>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                            <a href="#">
+                                <img alt="통합검색" src="//image.istarbucks.co.kr/common/img/common/icon_magnifier_black.png">
+                            </a>
+                        </form>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">COFFEE<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/menu/list" style="color: red">MENU</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">STORE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">RESPONSIBILITY</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">STARBUCKS REWARDS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">CORPORATE SALES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">WHAT'S NEW</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+</nav>
+
+<main role="main" class="mypage-container">
+
+    <H2 class="md-6 pb-3">회원 가입</H2>
+
     <form method="post" enctype="multipart/form-data">
-    <table>
-        <tr>
-            <td></td>
-            <td><input type="hidden" name="idx"></td>
-        </tr>
+    <table class="table">
+
+        <input type="hidden" name="idx">
+
         <tr>
             <td>아이디</td>
-            <td><input type="text" name="uid"></td>
+            <td><input type="text" name="uid" class="form-control"></td>
         </tr>
-        <tr>
-            <td></td>
-            <td><input type="hidden" name="uuid"></td>
-        </tr>
+
+        <input type="hidden" name="uuid">
+
         <tr>
             <td>패스워드</td>
-            <td><input type="password" name="upw"></td>
+            <td><input type="password" name="upw" class="form-control"></td>
         </tr>
         <tr>
             <td>이름</td>
-            <td><input type="text" name="uname"></td>
+            <td><input type="text" name="uname" class="form-control"></td>
         </tr>
         <tr>
             <td>닉네임</td>
-            <td><input type="text" name="nickname"></td>
+            <td><input type="text" name="nickname" class="form-control"></td>
         </tr>
         <tr>
             <td>전화번호</td>
-            <td><input type="text" name="phone"></td>
+            <td><input type="text" name="phone" class="form-control"></td>
         </tr>
         <tr>
             <td>이메일</td>
-            <td><input type="text" name="email"></td>
+            <td><input type="text" name="email" class="form-control"></td>
         </tr>
         <tr>
             <%--주소 폼 시작--%>
-            <td><input type="text" id="sample6_postcode" placeholder="우편번호"></td>
-            <td><input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"></td>
+            <td><input type="text" id="sample6_postcode" placeholder="우편번호" class="form-control" onclick="sample6_execDaumPostcode()"></td>
+            <td><input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기" class="btn"></td>
         </tr>
         <tr>
-            <td><input type="text" name="address1" id="sample6_address" placeholder="주소"></td>
-            <td><input type="text" name="address2" id="sample6_detailAddress" placeholder="상세주소"></td>
+            <td><input type="text" name="address1" id="sample6_address" placeholder="주소" class="form-control"></td>
+            <td><input type="text" name="address2" id="sample6_detailAddress" placeholder="상세주소" class="form-control"></td>
             <td><input type="hidden" id="sample6_extraAddress"></td>
             <%--주소 폼 끝--%>
         </tr>
-        <tr>
-            <td></td>
-            <td><input type="hidden" name="regdate"></td>
-        </tr>
+
+        <input type="hidden" name="regdate">
+
         <tr>
             <td>사진</td>
-            <td><input type="file" name="uphoto"></td>
+            <td>
+                <div class="input-group mb-3">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" name="uphoto" id="inputGroupFile02">
+                        <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">파일 선택</label>
+                    </div>
+                </div>
+            </td>
         </tr>
         <tr>
-            <td></td>
-            <td><input type="submit" value="가입하기"></td>
+            <td colspan="2"><input type="submit" value="가입하기" class="btn btn-success"></td>
         </tr>
     </table>
     </form>
+
+</main>
 
     <%--다음 주소 서비스 script--%>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
@@ -124,6 +211,16 @@
             }).open();
         }
     </script>
+
+    <!-- Bootstrap core JavaScript
+        ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/assets/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="js/assets/vendor/popper.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/assets/js/vendor/holder.min.js"></script>
+    <script src="js/bootstrap/offcanvas.js"></script>
 
 
 </body>

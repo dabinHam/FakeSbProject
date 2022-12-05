@@ -32,9 +32,10 @@ public class MemberModifyService {
             }
         }
         MemberDTO memberDTO = memberRegRequestDTO.toMember();
-        if(newFileName!=null){
+        if(newFileName!=null) {
             memberDTO.setUphoto(newFileName);
         }
+        log.info(newFileName);
         log.info(memberDTO);
         return memberMapper.updateMember(memberDTO);
     }

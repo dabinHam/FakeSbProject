@@ -20,7 +20,7 @@
 
     <update id="updateMember" parameterType="com.app.sb.domain.MemberDTO">
         update sb_member set
-        nickname=#{nickname}, phone=#{phone}, email=#{email}, address1=#{address1}, address2=#{address2}
+        nickname=#{nickname}, phone=#{phone}, email=#{email}, address1=#{address1}, address2=#{address2}, uphoto=#{uphoto}
         where uid=#{uid}
     </update>
 

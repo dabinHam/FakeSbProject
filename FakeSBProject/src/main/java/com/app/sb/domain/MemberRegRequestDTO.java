@@ -14,10 +14,10 @@ import java.time.LocalDate;
 @ToString
 public class MemberRegRequestDTO {
 
-    @NotEmpty(message = "아이디를 입력해주세요. ")
+    @NotEmpty(message = "아이디를 입력해주세요.")
     private String uid;
 
-    @NotEmpty
+    @NotEmpty(message = "비밀번호를 입력해주세요.")
     private String upw;
 
     private String uname;

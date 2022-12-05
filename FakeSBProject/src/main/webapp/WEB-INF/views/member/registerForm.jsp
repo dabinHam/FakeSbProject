@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
     <title>회원가입</title>
@@ -102,14 +103,19 @@
 
         <tr>
             <td>아이디</td>
-            <td><input type="text" name="uid" class="form-control"></td>
+            <td>
+                <input type="text" name="uid" class="form-control">
+<%--                <p>${errors.get(0).getDefaultMessage()}</p>--%>
+            </td>
         </tr>
 
         <input type="hidden" name="uuid">
 
         <tr>
             <td>패스워드</td>
-            <td><input type="password" name="upw" class="form-control"></td>
+            <td>
+                <input type="password" name="upw" class="form-control">
+            </td>
         </tr>
         <tr>
             <td>이름</td>
@@ -164,6 +170,15 @@
     </form>
 
 </main>
+
+    <!-- 입력 형식에 맞지 않는 값에 대한 에러 메세지 확인 -->
+    <script>
+        const serverValidResult = {}
+        <c:forEach items="${errors}" var="error">
+            serverValidResult['${error.getField()}'] = '${error.defaultMessage}'
+        </c:forEach>
+        console.log(serverValidResult)
+    </script>
 
     <%--다음 주소 서비스 script--%>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 @Controller
@@ -29,9 +30,9 @@ public class MemberModifyController {
     }
 
     @PostMapping
-    public String Edit(MemberRegRequestDTO memberRegRequestDTO, HttpSession session){
+    public String Edit(MemberRegRequestDTO memberRegRequestDTO, HttpSession session, HttpServletRequest request){
         log.info("edit..." + memberRegRequestDTO);
-        memberModifyService.editMember(memberRegRequestDTO);
+        memberModifyService.editMember(memberRegRequestDTO, request);
         session.invalidate();
         return "redirect:/login";
     }

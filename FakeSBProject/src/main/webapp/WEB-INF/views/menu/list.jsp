@@ -23,11 +23,11 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="js/assets/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="js/assets/vendor/popper.min.js"></script>
-    <script src="js/bootstrap/bootstrap.min.js"></script>
-    <script src="js/assets/js/vendor/holder.min.js"></script>
-    <script src="js/bootstrap/offcanvas.js"></script>
+    <script>window.jQuery || document.write('<script src="/js/assets/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="/js/assets/vendor/popper.min.js"></script>
+    <script src="/js/bootstrap/bootstrap.min.js"></script>
+    <script src="/js/assets/js/vendor/holder.min.js"></script>
+    <script src="/js/bootstrap/offcanvas.js"></script>
 
 </head>
 <body class="m-md-5">
@@ -112,21 +112,21 @@
 
 <main role="main" class="container menu-main">
     <div class="my-md-5 p-3">
-        <h3 class="lh-150">음료</h3>
+        <h3 class="lh-150 ">음료</h3>
     <c:if test="${loginInfo ne null}">
         <a class="menu_btn mana_btn" href="/menu/manage">
             메뉴관리
         </a>
     </c:if>
-        <ul class="row menu-main-ul">
+        <ul class="row menu-list-main-ul">
             <c:forEach var="menu" items="${menuList}" varStatus="stat">
                 <li class="col-md-3">
                     <a href="/menu/read?mdx=${menu.mdx}" class="m_img_box">
                         <img src="/uploadfile/menu/${menu.mphoto}" alt="(${menu.productko}|${menu.producten}">
                     </a>
-                    <a href="/menu/read" class="m_txt_box">
-                            <p>${menu.productko}</p>
-                    </a>
+                    <span class="m_txt_box">
+                        <h6 class="mb-0 p-3">${menu.productko}</h6>
+                    </span>
                 </li>
             </c:forEach>
         </ul>

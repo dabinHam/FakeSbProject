@@ -2,14 +2,17 @@
 .blind {overflow: hidden; display:block; position:absolute; border: 0; width: 1px; height: 1px; clip: rect(1px, 1px, 1px, 1px); font-size: 1px;}
 
 h3{font-size: 30px;}
+.menu-list-main-ul h6{font-size: 14px;}
 
 .menu_btn{ display: inline-block; background: #b3d7ff; cursor: pointer; margin: 3px; padding: 2px; box-sizing: border-box;border-radius: 10%; color: ghostwhite;}
 .menu_btn:hover{background: #0069d9; color: red; }
 
 .menu-main a,p,span{color: #555}
 
-.m_img_box{ background: #b3d7ff; display: inline-block; background: url("/uploadfile/menu/coffee.png")}
+.m_img_box{ background: #b3d7ff; display: inline-block; background: url("/uploadfile/menu/coffee.png"); overflow: hidden;}
 .m_img_box img{width: 100%; display: block;}
+.m_img_box:hover img{transform: scale(1.1); transition: all 0.6s;}
 
-.m_txt_box{display: inline-block;}
-.m_txt_box p{display: block; text-align: center}
+
+.m_txt_box{display: inline-block; width: inherit;}
+.m_txt_box h6 {width: 100%; display: inline-block; text-align: center}

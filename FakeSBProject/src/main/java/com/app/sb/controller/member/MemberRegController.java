@@ -34,7 +34,7 @@ public class MemberRegController {
             return "redirect:/register";
         }
         log.info(memberRegRequestDTO.toMember());
-        memberRegService.RegisterMember(memberRegRequestDTO, request);
+        memberRegService.registerMember(memberRegRequestDTO, request);
         return "redirect:/index";
     }
 

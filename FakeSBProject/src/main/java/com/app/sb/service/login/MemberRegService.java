@@ -17,7 +17,7 @@ public class MemberRegService {
     @Autowired
     public MemberMapper memberMapper;
 
-    public int RegisterMember(MemberRegRequestDTO memberRegRequestDTO, HttpServletRequest request){
+    public int registerMember(MemberRegRequestDTO memberRegRequestDTO, HttpServletRequest request){
         String newFileName = null;
         if(memberRegRequestDTO.getUphoto()!=null && !memberRegRequestDTO.getUphoto().isEmpty()){
             String dirURI = "/uploadfile/member";

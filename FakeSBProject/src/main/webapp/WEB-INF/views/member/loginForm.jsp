@@ -97,7 +97,10 @@
   <div class="md-6 p-3 bg-white rounded box-shadow">
 
     <p class="text-center">로그인</p>
-    <p class="text-center">Welcome! 스타벅스 코리아에 오신 것을 환영합니다.</p>
+    <div class="text-center">
+      <span style="color: #006633">Welcome!</span>
+      <span class="text-black-50">스타벅스 코리아에 오신 것을 환영합니다.</span>
+    </div>
     <hr>
     <form method="post" action="/login" class="form-group">
       <div class="form-group">
@@ -126,7 +129,6 @@
   </div>
 
 </main>
-</body>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
@@ -137,5 +139,9 @@
 <script src="js/bootstrap/bootstrap.min.js"></script>
 <script src="js/assets/js/vendor/holder.min.js"></script>
 <script src="js/bootstrap/offcanvas.js"></script>
+
+</body>
+
+
 
 </html>

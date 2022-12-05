@@ -2313,6 +2313,7 @@ select.form-control:focus::-ms-value {
 	border-radius: .25rem;
 	transition: color .15s ease-in-out, background-color .15s ease-in-out,
 		border-color .15s ease-in-out, box-shadow .15s ease-in-out
+
 }
 
 @media screen and (prefers-reduced-motion:reduce) {
@@ -2670,10 +2671,11 @@ a.btn.disabled, fieldset:disabled a.btn {
 }
 
 .btn-outline-secondary {
-	color: #6c757d;
-	background-color: transparent;
+	color: #4e555b;
+	background-color: white;
 	background-image: none;
-	border-color: #6c757d
+	border-color: gray;
+	font-weight: bold;
 }
 
 .btn-outline-secondary:hover {

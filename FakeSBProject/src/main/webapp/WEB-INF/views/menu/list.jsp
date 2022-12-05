@@ -112,7 +112,7 @@
 
 <main role="main" class="container menu-main">
     <div class="my-md-5 p-3">
-        <h3 class="lh-150 ">음료</h3>
+        <h3 class="lh-150 font-weight-bold">음료</h3>
     <c:if test="${loginInfo ne null}">
         <a class="menu_btn mana_btn" href="/menu/manage">
             메뉴관리

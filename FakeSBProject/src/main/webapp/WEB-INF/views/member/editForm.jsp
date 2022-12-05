@@ -117,12 +117,12 @@
                 <%--주소 폼 시작--%>
                 <td rowspan="2">
                     <input type="text" id="sample6_postcode" placeholder="우편번호" class="form-control mb-2" onclick="sample6_execDaumPostcode()">
-                    <input type="text" name="address1" id="sample6_address" placeholder="주소" class="form-control">
+                    <input type="text" name="address1" value="${loginInfo.address1}" id="sample6_address" class="form-control">
 
                 </td>
                 <td rowspan="2">
                     <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기" class="btn mb-2">
-                    <input type="text" name="address2" id="sample6_detailAddress" placeholder="상세주소" class="form-control">
+                    <input type="text" name="address2" value="${loginInfo.address2}" id="sample6_detailAddress" class="form-control">
                 </td>
             </tr>
             <tr>

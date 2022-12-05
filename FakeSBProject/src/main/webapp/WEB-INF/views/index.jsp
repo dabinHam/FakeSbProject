@@ -20,7 +20,7 @@
     <script src="js/assets/js/vendor/holder.min.js"></script>
     <script src="js/bootstrap/offcanvas.js"></script>
 </head>
-<body>
+<body class="m-md-5">
 
 
 <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light" >
@@ -31,7 +31,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+    <div class="navbar-collapse offcanvas-collapse m-sm-2" id="navbarsExampleDefault">
 
         <table>
             <tr>
@@ -98,33 +98,11 @@
     </div>
 </nav>
 
-<div class="nav-scroller bg-white box-shadow">
-    <nav class="nav nav-underline">
-        <a class="nav-link active" href="#">Dashboard</a>
-        <a class="nav-link" href="#">
-            Friends
-            <span class="badge badge-pill bg-light align-text-bottom">27</span>
-        </a>
-        <a class="nav-link" href="#">Explore</a>
-        <a class="nav-link" href="#">Suggestions</a>
-        <a class="nav-link" href="#">Link</a>
-        <a class="nav-link" href="#">Link</a>
-        <a class="nav-link" href="#">Link</a>
-        <a class="nav-link" href="#">Link</a>
-        <a class="nav-link" href="#">Link</a>
-    </nav>
-</div>
+
 
 <main role="main" class="container">
-    <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-dark rounded box-shadow">
-        <img class="mr-3" src="https://icons.getbootstrap.com/assets/img/icons-hero.png" alt="" width="48" height="48">
-        <div class="lh-100">
-            <h6 class="mb-0 text-white lh-100">Bootstrap</h6>
-            <small>Since 2011</small>
-        </div>
-    </div>
 
-    <div class="my-3 p-3 bg-white rounded box-shadow">
+    <div class="my-md-5 p-3 bg-white rounded box-shadow">
         <h6 class="border-bottom border-gray pb-2 mb-0">Recent updates</h6>
         <div class="media text-muted pt-3">
             <img data-src="holder.js/32x32?theme=thumb&bg=007bff&fg=007bff&size=1" alt="" class="mr-2 rounded">
@@ -190,7 +168,6 @@
     </div>
 </main>
 
-<a href="hello-servlet">Hello Servlet</a>
 
 
 

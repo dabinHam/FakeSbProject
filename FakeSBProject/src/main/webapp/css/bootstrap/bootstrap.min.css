@@ -3952,6 +3952,7 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 .navbar-nav {
 	display: -ms-flexbox;
 	display: flex;
+	justify-content: flex-end;
 	-ms-flex-direction: column;
 	flex-direction: column;
 	padding-left: 0;
@@ -7488,6 +7489,8 @@ supports ((position:-webkit-sticky ) or (position:sticky )){ .
 .ml-5, .mx-5 {
 	margin-left: 3rem !important
 }
+
+
 
 .p-0 {
 	padding: 0 !important

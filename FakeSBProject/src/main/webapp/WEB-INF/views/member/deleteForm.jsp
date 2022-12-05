@@ -10,6 +10,8 @@
 <head>
     <title>회원탈퇴</title>
 
+  <link rel="icon" href="/image/main/favicon.ico" type="image/ico">
+
   <!-- Bootstrap core CSS -->
   <link href="/css/bootstrap/bootstrap.min.css" rel="stylesheet">
   <!-- Custom styles for this template -->

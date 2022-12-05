@@ -6,6 +6,9 @@
 <html lang="ko">
 <head>
     <title>JSP - Hello World</title>
+
+    <link rel="icon" href="/image/main/favicon.ico" type="image/ico">
+
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
@@ -23,7 +26,8 @@
 <body class="m-md-5">
 
 
-<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light" >
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light " >
+    <div class="container">
     <a href="/index">
     <img src="https://www.starbucks.co.kr/common/img/common/logo.png" width="70px">
     </a>
@@ -95,6 +99,7 @@
                 </td>
             </tr>
         </table>
+    </div>
     </div>
 </nav>
 

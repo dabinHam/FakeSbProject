@@ -38,3 +38,4 @@ Java Spring - mini project
 ### 프로젝트 미리보기
 ![대체 텍스트](./1.png)
 ![대체 텍스트](./2.png)
+![sbmenu](https://user-images.githubusercontent.com/113006964/209286939-0b5f8c9d-3592-41ac-9f3c-936dd3714bc1.png)

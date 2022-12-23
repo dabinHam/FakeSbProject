@@ -12,7 +12,7 @@ Java Spring - mini project
 	- JavaScript
 - JAVA
 	- Spring Framework
-- DMBS - Mysql
+- DBMS - Mysql
 - Mybatis
 
 ## 프로젝트 구조
